@@ -9,4 +9,4 @@ image: /assets/article_images/2017-09-17-a-new-blog/edinburgh.jpg
 
 This a test post to my blog. Hopefully I will find time to write and share with you some experiences in software development and testing. 
 
-The magnificent city of Edinburgh, where I live and work.
+Picture: The magnificent city of Edinburgh, where I live and work.
