@@ -9,15 +9,4 @@ image: /assets/article_images/2017-09-17-a-new-blog/edinburgh.jpg
 
 This a test post to my blog. Hopefully I will find time to write and share with you some experiences in software development and testing. 
 
-Picture: The magnificent city of Edinburgh, where I live and work. 
-
-{% highlight js %}
-
-<footer class="site-footer">
- <a class="subscribe" href="{{ "/feed.xml" | prepend: site.baseurl }}"> <span class="tooltip"> <i class="fa fa-rss"></i> Subscribe!</span></a>
-  <div class="inner">a
-   <section class="copyright">All content copyright <a href="mailto:{{ site.email}}">{{ site.name }}</a> &copy; {{ site.time | date: '%Y' }} &bull; All rights reserved.</section>
-   <section class="poweredby">Made with <a href="http://jekyllrb.com"> Jekyll</a></section>
-  </div>
-</footer>
-{% endhighlight %}
+The magnificent city of Edinburgh, where I live and work.
