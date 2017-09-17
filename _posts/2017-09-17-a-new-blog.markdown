@@ -3,7 +3,7 @@ layout: post
 title:  "A new blog!"
 date:   2017-09-17 23:16:25
 categories: generic
-tags:
+tags: featured
 image: /assets/article_images/2017-09-17-a-new-blog/edinburgh.jpg
 ---
 
