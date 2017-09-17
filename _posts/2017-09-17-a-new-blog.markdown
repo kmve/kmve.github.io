@@ -11,6 +11,7 @@ This a test post to my blog. Hopefully I will find time to write and share with 
 
 Picture: The magnificent city of Edinburgh, where I live and work. 
 
+{% highlight js %}
 
 <footer class="site-footer">
  <a class="subscribe" href="{{ "/feed.xml" | prepend: site.baseurl }}"> <span class="tooltip"> <i class="fa fa-rss"></i> Subscribe!</span></a>
