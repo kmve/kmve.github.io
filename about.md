@@ -4,14 +4,8 @@ title: About
 permalink: /about/
 ---
 
-A medium inspired Jekyll blog theme. The basic idea came from the Ghost theme 
-[Readium 2.0](http://www.svenread.com/readium-ghost-theme/). I use mediator on my own blog [The Base](blog.base68.com).
+Currently a Principal Software Tester at FanDuel, the leading daily fantasy sports company in the US and Canada. With over twelve years experience in software engineering, functional and performance testing across financial, healthcare and daily fantasy sports industries, I have been helping organisations become more effective and efficient in delivering quality products and services to markets. Enthusiastic about Python, maths and music; I also enjoys spending time with family, friends, and playing football.
 
-You can **download** the theme here:
-[https://github.com/dirkfabisch/mediator](https://github.com/dirkfabisch/mediator) 
+This blog contains my own thoughts and are in no way representative of my employers past or present.
 
-You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
-
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+Special thanks to Dirk Fabisch and other contributors for the wonderful [Mediator Jekyll blog theme](https://github.com/dirkfabisch/mediator).
