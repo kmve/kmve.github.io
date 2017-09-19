@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+image: /assets/images/about.jpg
 permalink: /about/
 ---
 
@@ -8,4 +9,4 @@ Currently a Principal Software Tester at FanDuel, the leading daily fantasy spor
 
 This blog contains my own thoughts and are in no way representative of my employers past or present.
 
-Special thanks to Dirk Fabisch and other contributors for the wonderful [Mediator Jekyll blog theme](https://github.com/dirkfabisch/mediator).
+Thanks to Dirk Fabisch and other contributors for the wonderful [Mediator Jekyll blog theme](https://github.com/dirkfabisch/mediator).
