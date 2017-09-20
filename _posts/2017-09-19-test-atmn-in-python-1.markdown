@@ -5,6 +5,7 @@ date:   2017-09-19 19:30:23
 categories: generic
 tags: 
 image: /assets/article_images/2017-09-19-test-atmn-in-python-1/time.jpg
+image: /assets/article_images/2017-09-19-test-atmn-in-python-1/time_mobile.jpg
 ---
 
 I have submitted a proposal to talk at several software test conferences taking place in 2018 where I hope to share our implementation of test automation we have taken at FanDuel (which are really just checks, not the automation of testing). I hope that this talk will be able to serve as both an introduction for beginners in test automation, specifically in Python, as well as provide an insight into a slightly atypical set of design patterns to those more experienced. And the same goes for this series of posts, which serves as representation of the proposed talks. To clarify, by test automation, I mean to only address our implementation of service level integration tests as well as end-to-end or integration tests at both client and client facing api levels.
