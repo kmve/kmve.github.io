@@ -5,7 +5,7 @@ date:   2017-09-20 01:35:23
 categories: generic
 tags: 
 image: /assets/article_images/2017-09-20-test-atmn-in-python-2/time.jpg
-image2: image: /assets/article_images/2017-09-20-test-atmn-in-python-2/time_mobile.jpg
+image2: /assets/article_images/2017-09-20-test-atmn-in-python-2/time_mobile.jpg
 ---
 
 Much has been written on getting set up with Python, therefore this post just references external guides that I have hand picked from various sources for you.
