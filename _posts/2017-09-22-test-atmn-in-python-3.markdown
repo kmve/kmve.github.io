@@ -4,8 +4,8 @@ title:  "Test Automation in Python III - Pytest"
 date:   2017-09-22 23:40:25
 categories: generic
 tags: 
-image: /assets/article_images/2017-09-19-test-atmn-in-python-3/time.jpg
-image2: /assets/article_images/2017-09-19-test-atmn-in-python-3/time_mobile.jpg
+image: /assets/article_images/2017-09-22-test-atmn-in-python-3/time.jpg
+image2: /assets/article_images/2017-09-22-test-atmn-in-python-3/time_mobile.jpg
 ---
 
 Python has several test frameworks to choose from. The one I would like to bring to your attention is pytest, which is a wonderfully simple yet very powerful test framework.
@@ -44,7 +44,7 @@ class FirstJUnit5Tests {
 }
 {% endhighlight %}
 
-If we have our virtualenv with pytest installed as a package (can be confirmed by listing your installed packages with with "pip free"), then we can simply run the test by executing the following in terminal within your new project directory:
+If we have our virtualenv with pytest installed as a package (can be confirmed by listing your installed packages with with **pip freeze**), then we can simply run the test by executing the following in terminal within your new project directory:
 
 {% highlight shell_terminal %}
 (venv) $ py.test
@@ -105,7 +105,7 @@ Test fixtures are predominantly used in the form of carrying out necessary set u
 
 Under object-oriented test structures, such as JUnit, test classes facilitate test fixtures through setUp and tearDown methods (e.g. methods are annotated with @BeforeAll, @BeforeEach, @AfterEach, @AfterAll). Whilst pytest still facilitates this, as there are many advantages to using this OO approach, pytest provides the ability to apply test fixtures to both independent test functions and test functions within test classes by means of *dependency injection*. 
 
-Diving straight into an example again, if we edit out previous test file *test_file_example.py* with the following contents:
+Diving straight into an example again, if we edit our previous test file *test_file_example.py* with the following contents:
 
 {% highlight python %}
 import pytest
@@ -121,7 +121,7 @@ def test_function_example(three_fixture):
     assert three_fixture == number_three()
 {% endhighlight %}
 
-Here we have imported the pytest package at line 1, in order to be able to decorate the function *three_fixture* with *@pytest.fixture*. We have our function *number_three* which is our function under test as well as our test function *test_function_example*. In this case we have entered *three_fixture* as an argument to our test function which I wanted to draw your attention to but I will explain later what exactly is happening.
+Here we have imported the pytest package at line 1 in order to be able to decorate the function *three_fixture* with *@pytest.fixture*. We have our function *number_three*, which is our function under test, as well as our test function *test_function_example*. In this case we have entered *three_fixture* as an argument to our test function which I wanted to draw your attention to but I will explain later what exactly is happening.
 
 If we run this test, you will see the test will pass. This means the assertion statement has resolved to asserting that 3 does in fact equal 3.
 
