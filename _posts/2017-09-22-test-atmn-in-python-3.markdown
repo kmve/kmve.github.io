@@ -125,13 +125,13 @@ Here we have imported the pytest package at line 1 in order to be able to decora
 
 If we run this test, you will see the test will pass. This means the assertion statement has resolved to asserting that 3 does in fact equal 3.
 
-By decorating the function with *@pytest.fixture* and importing this function name as an argument of a test, we are injecting the return of that function into our test. So to explain in steps, when running the py.test command:
+By decorating the function with *@pytest.fixture* and importing this function name as an argument of a test, we are injecting the return of that function into our test. So to explain what pytest is doing, at a high-level in ordered steps, when running the py.test command:
 
-* Test auto-discovery kicks in and identifies the test file *test_file_example.py* and within that test function *test_function_example*
-* Pytest then assesses that test function's defined arguments, finding a fixture named *three_fixture* and executes that fixture function *before* it enters the test logic.
-* The executed fixture returns the integer 3.
-* The assertion statement has reference to a variable *three_fixture* which contains the returned value from the point above.
-* The assertion statement attempts to equate the variable *three_fixture* (of value 3) with the method call *number_three()* which returns 3 at the point of being called within the test.
+1. Test auto-discovery kicks in and identifies the test file *test_file_example.py* and within that test function *test_function_example*
+2. Pytest then assesses that test function's defined arguments, finding a fixture named *three_fixture* and executes that fixture function *before* it enters the test logic.
+3. The executed fixture returns the integer 3.
+4. The assertion statement has reference to a variable *three_fixture* which contains the returned value from the point above.
+5. The assertion statement attempts to equate the variable *three_fixture* (of value 3) with the method call *number_three()* which returns 3 at the point of being called within the test.
 
 Now this demonstration isn't showing a setup in the true sense of the word (returning the integer 3 isn't setting up anything), I am just showing how a function can be switched into a fixture, by use of the pytest decorator, and how that fixture can be imported (or rather *injected*) into a test function and then accessed via a variable. As the pytest documentation puts it, "fixture functions take the role of the injector and test functions are the consumers of fixture objects."
 
@@ -152,10 +152,10 @@ def api_client(api):
 
 The above test fixture:
 
-* Imports an *api* fixture, which is ran before the *api_client* fixture's logic begins to execute. (Yes, that's right a fixture within a fixture).
-* The *api_client* fixture calls the *login* method on a returned hypothetical api object instance as a setup.
-* The *api_client* fixture returns the instance to the consumer of the fixture
-* Once the consumer has exited their function, the *logout* is subsequently execute as a means of teardown.
+1. Imports an *api* fixture, which is ran before the *api_client* fixture's logic begins to execute. (Yes, that's right a fixture within a fixture).
+2. The *api_client* fixture calls the *login* method on a returned hypothetical api object instance as a setup.
+3. The *api_client* fixture returns the instance to the consumer of the fixture
+4. Once the consumer has exited their function, the *logout* is subsequently execute as a means of teardown.
 
 Again, whilst this may not be a realistic example it is demonstrating the ability to house test setup and tear down within the same test fixture.
 
