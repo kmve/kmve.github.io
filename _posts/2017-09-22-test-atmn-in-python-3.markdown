@@ -20,14 +20,14 @@ To begin to use pytest, you would first need to download and install the pytest 
 
 This should install the latest version of python (at the time of writing the version is 3.2.2).
 
-In a new project folder, create a new file named "test_file_example.py" and enter the following contents:
+In a new project folder, create a new file named *test_file_example.py* and enter the following contents:
 
 {% highlight python %}
 def test_function_example():
     assert 2 == 1 + 1
 {% endhighlight %}
 
-In this example, we are simply asserting that the value of 2 is equal to the sum of 1 + 1. The test file is named "test_file_example" and the test function is named "test_function_example". Already I hope to have demonstrated to you that the amount of code required to construct simple test is minimal. The equivalent in the JUnit5 framework for Java would be:
+In this example, we are simply asserting that the value of 2 is equal to the sum of 1 + 1. The test file is named *test_file_example* and the test function is named *test_function_example*. Already I hope to have demonstrated to you that the amount of code required to construct simple test is minimal. The equivalent in the JUnit5 framework for Java would be:
 
 {% highlight java %}
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -50,7 +50,7 @@ If we have our virtualenv with pytest installed as a package (can be confirmed b
 (venv) $ py.test
 {% endhighlight %}
 
-And this will produce a output like so:
+And this will produce an output like so:
 
 {% highlight shell_terminal %}
 ================================= test session starts =================================
@@ -63,7 +63,7 @@ test_file_example.py .
 ============================== 1 passed in 0.01 seconds ===============================
 {% endhighlight %}
 
-So this is just a very simple test being run. We have shown that with python and pytest we are not limited to just an object-oriented design structure and that we do not need to write any boilerplate code or inherit any test related base classes for our tests. The pytest test runner has auto-discovery of tests and identifies tests through the prefix "test_" first by the filenames and then by function names (filenames can alternatively be suffixed with "_test", though this doesn't apply to function names).
+So this is just a very simple test being run. We have shown that with python and pytest we are not limited to just an object-oriented design structure and that we do not need to write any boilerplate code nor inherit any test related base classes for our tests. The pytest test runner has auto-discovery of tests and identifies tests through the prefix "test_" first by the filenames and then by function names (filenames can alternatively be suffixed with "_test", though this doesn't apply to function names).
 
 Let's change the contents of the test file to the following:
 
@@ -103,7 +103,7 @@ Test auto-discovery, negligible boilerplate and detailed failure introspection a
 
 Test fixtures are predominantly used in the form of carrying out necessary set up as a prerequisite in order to execute a test but can also involve some post process following a test such as clean up.
 
-Under object-oriented test structures, such as JUnit, test classes facilitate test fixtures through setUp and tearDown methods (e.g. methods are annotated with *@BeforeAll*, *@BeforeEach*, *@AfterEach*, *@AfterAll*). Whilst pytest still facilitates this, as there are many advantages to using this OO approach, pytest provides the ability to apply test fixtures to both independent test functions and test functions within test classes by means of **dependency injection**. 
+Under object-oriented test structures, such as JUnit, test classes facilitate test fixtures through setUp and tearDown methods (e.g. methods are annotated with *@BeforeAll*, *@BeforeEach*, *@AfterEach*, *@AfterAll*). Whilst pytest still facilitates this, it also provides the ability to apply test fixtures to both independent test functions and test functions within test classes by means of **dependency injection**. 
 
 Diving straight into an example again, if we edit our previous test file *test_file_example.py* with the following contents:
 
@@ -121,7 +121,7 @@ def test_function_example(three_fixture):
     assert three_fixture == number_three()
 {% endhighlight %}
 
-Here we have imported the pytest package at line 1 in order to be able to decorate the function *three_fixture* with *@pytest.fixture*. We have our function *number_three*, which is our function under test, as well as our test function *test_function_example*. In this case we have entered *three_fixture* as an argument to our test function which I wanted to draw your attention to but I will explain later what exactly is happening.
+Here we have imported the pytest package at line 1 in order to be able to decorate the function *three_fixture* with *@pytest.fixture*. We have our function *number_three*, which is our function under test, as well as our test function *test_function_example*. Note that we have entered *three_fixture* as an argument to our test function, I will explain later what exactly is happening.
 
 If we run this test, you will see the test will pass. This means the assertion statement has resolved to asserting that 3 does in fact equal 3.
 
@@ -135,9 +135,9 @@ By decorating the function with *@pytest.fixture* and importing this function na
 
 Now this demonstration isn't showing a setup in the true sense of the word (returning the integer 3 isn't setting up anything), I am just showing how a function can be switched into a fixture, by use of the pytest decorator, and how that fixture can be imported (or rather *injected*) into a test function and then accessed via a variable. As the pytest documentation puts it, "fixture functions take the role of the injector and test functions are the consumers of fixture objects."
 
-In pytest, each fixture needs to have a unique name and, when not co-located within the same file as a test function, need to be declared at module, class or, my personal preference, at project level. For the purposes of this post, I will provide more details on the declaration of fixtures, for use within a project, in a future post as this is closely tied to a design pattern of test fixtures that I discuss in a later post in the series.
+In pytest, each fixture needs to have a unique name and, when not co-located within the same file as a test function, needs to be declared at module, class or at project level. In a future post I will provide more details on the declaration of fixtures, for use within a project, as this is closely tied to a design pattern of test fixtures which I wish to demonstrate.
 
-Teardowns in pytest can take two forms; you can house a teardown in the same fixture as a setup or house a teardown in its own independent fixture. Here is an example of a setup and teardown in the same fixture (note that this is an illustration and will not run within your *test_file_example.py*):
+Teardowns in pytest can take at least two forms; you can house a teardown in the same fixture as a setup or house a teardown in its own independent fixture. Here is an example of a setup and teardown in the same fixture (note that this is an illustration and will not run within your *test_file_example.py*):
 
 
 {% highlight python %}
@@ -156,8 +156,6 @@ The above test fixture:
 2. The *api_client* fixture calls the *login* method on a returned hypothetical api object instance as a setup.
 3. The *api_client* fixture returns the instance to the consumer of the fixture.
 4. Once the consumer has exited their function, the *logout* is subsequently execute as a means of teardown.
-
-Again, whilst this may not be a realistic example it is demonstrating the ability to house test setup and tear down within the same test fixture.
 
 Having a modular implemention of test fixtures allows for a much simpler and scalable way to use, reuse and share test setups and teardowns within and amongst projects.
 
