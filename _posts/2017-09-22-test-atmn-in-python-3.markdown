@@ -161,6 +161,6 @@ Again, whilst this may not be a realistic example it is demonstrating the abilit
 
 Having a modular implemention of test fixtures allows for a much simpler and scalable way to use, reuse and share test setups and teardowns within and amongst projects.
 
-There are many more features as well as some handy nuances, in pytest, that bring about a very powerful and flexible test framework which is excellently placed to deal with larger test automation projects. I hope this post have given you a brief insight into its key features, if you would like to find out more please do check out their [website](https://docs.pytest.org/en/latest/). In the next posts, I will show you how to write functional tests for apis and browsers using pytest and other tools.
+There are many more features as well as some handy nuances, in pytest, that bring about a very powerful and flexible test framework which is excellently placed to deal with larger test automation projects. I hope this post have given you a brief insight into its key features, if you would like to find out more please do check out their [website](https://docs.pytest.org/en/latest/). In the next posts, I will show you how to write functional tests for apis and browsers using pytest and other tools. After that, I will delve into more detail around design patterns and scalability.
 
 I would finally like to take the opportunity to thank all the contributors of pytest for creating an excellent framework which is not only immensely useful but an absolute pleasure to work with.
