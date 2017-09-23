@@ -75,7 +75,7 @@ def test_function_example():
     assert 2 == number_three()
 {% endhighlight %}
 
-So we have a function **number_three**, which returns an integer of 3, that is under test and we have a test function which is attempting to assert that number_three function returns 2. Running the test again returns the following:
+So we have a function *number_three*, which returns an integer of 3, that is under test and we have a test function which is attempting to assert that method call *number_three()* returns 2. Running the test again returns the following:
 
 {% highlight shell_terminal %}
 ================================= test session starts =================================
@@ -103,7 +103,7 @@ Test auto-discovery, negligible boilerplate and detailed failure introspection a
 
 Test fixtures are predominantly used in the form of carrying out necessary set up as a prerequisite in order to execute a test but can also involve some post process following a test such as clean up.
 
-Under object-oriented test structures, such as JUnit, test classes facilitate test fixtures through setUp and tearDown methods (e.g. methods are annotated with @BeforeAll, @BeforeEach, @AfterEach, @AfterAll). Whilst pytest still facilitates this, as there are many advantages to using this OO approach, pytest provides the ability to apply test fixtures to both independent test functions and test functions within test classes by means of *dependency injection*. 
+Under object-oriented test structures, such as JUnit, test classes facilitate test fixtures through setUp and tearDown methods (e.g. methods are annotated with *@BeforeAll*, *@BeforeEach*, *@AfterEach*, *@AfterAll*). Whilst pytest still facilitates this, as there are many advantages to using this OO approach, pytest provides the ability to apply test fixtures to both independent test functions and test functions within test classes by means of **dependency injection**. 
 
 Diving straight into an example again, if we edit our previous test file *test_file_example.py* with the following contents:
 
