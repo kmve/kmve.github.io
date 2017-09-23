@@ -154,7 +154,7 @@ The above test fixture:
 
 1. Imports an *api* fixture, which is ran before the *api_client* fixture's logic begins to execute. (Yes, that's right a fixture within a fixture).
 2. The *api_client* fixture calls the *login* method on a returned hypothetical api object instance as a setup.
-3. The *api_client* fixture returns the instance to the consumer of the fixture
+3. The *api_client* fixture returns the instance to the consumer of the fixture.
 4. Once the consumer has exited their function, the *logout* is subsequently execute as a means of teardown.
 
 Again, whilst this may not be a realistic example it is demonstrating the ability to house test setup and tear down within the same test fixture.
