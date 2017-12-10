@@ -32,7 +32,6 @@ The series takes this form:
   <li>An introduction to a test framework named pytest and its key features.</li>
   <li>Example - Writing a test for an API.</li>
   <li>Example - Writing a test for a browser.</li>
-  <li>Example - Writing a test for a native client.</li>
   <li>On stability - Good rules of thumb and design patterns.</li>
   <li>On scaling - Options for reducing overall test run times.</li>
   <li>Wrapping up - High-level case study and series summary.</li>
