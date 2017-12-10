@@ -18,7 +18,7 @@ To begin to use pytest, you would first need to download and install the pytest 
 (venv) $ pip install pytest
 {% endhighlight %}
 
-This should install the latest version of python (at the time of writing the version is 3.2.2).
+This should install the latest version of pytest (at the time of writing the version is 3.2.2).
 
 In a new project folder, create a new file named *test_file_example.py* and enter the following contents:
 
